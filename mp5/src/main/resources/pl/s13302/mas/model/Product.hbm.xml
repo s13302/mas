@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="pl.s13302.mas.model.Product" table="product">
+        <id name="id" column="product_id">
+            <generator class="native"/>
+        </id>
+        <property name="uuid" column="UUID" />
+        <property name="productName" />
+        <property name="nettoValue" scale="2" precision="5" />
+    </class>
+</hibernate-mapping>

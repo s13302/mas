@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="pl.s13302.mas.model.InvoiceItem" table="invoice_item">
+        <id name="id" column="item_id">
+            <generator class="native"/>
+        </id>
+        <property name="uuid" column="UUID" />
+        <property name="nettoAmount" precision="5" scale="2" />
+        <many-to-one name="product" column="product_id" fetch="join" />
+    </class>
+</hibernate-mapping>
